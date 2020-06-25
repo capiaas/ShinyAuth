@@ -1,0 +1,28 @@
+Package: ShinyAuth
+Type: Package
+Title: Shiny SSO Authentication 
+Version: 0.1.0
+Authors@R: c(
+      person("Stian", "Berger", email = "stian@capia.no", role = c("aut", "cre")),
+      person("Bjørn Ole", "Lindseth", email = "bjorn@capia.no", role = c("ctb"))
+    )
+Description: Enabling authenticating of users from different identity providers in shiny
+    using oAuth / OpenIDC protocol. Supporting Auth0 and Keycloac (More to come).
+    Federation to other identity providers like Azure, Google, Facebook and others is possible through Auth0 and Keycloak.
+    Not reliant on Shiny Server Pro.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports:
+  R6,
+  shiny,
+  httr,
+  glue,
+  jsonlite
+LazyData: true
+RoxygenNote: 7.1.0
+Collate: 
+    'Abstract_ShinyAuth.R'
+    'ShinyAuth_Auth0.R'
+    'ShinyAuth_Keycloak.R'
+Suggests: 
+    testthat
