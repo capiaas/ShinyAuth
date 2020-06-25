@@ -1,4 +1,4 @@
-# ShinyAuth
+# ShinyAuth <img src='man/figures/ShinyAuth-sticker.svg' align="right" height="139" />
 
 `ShinyAuth` provides a way to protect a [Shiny](https://shiny.rstudio.com/) application behind oAuth and OpenID Connect service providers.
 

@@ -55,4 +55,4 @@ ShinyAuth_Auth0 = R6::R6Class(
     }
   )
 )
-Abstract_ShinyAuth$new
+
