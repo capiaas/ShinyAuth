@@ -23,7 +23,7 @@ Provides methods for protecting a Shiny app against Auth0 as identity provider.
 
 \item{\code{url_userinfo_template}}{URL template for userinfo entrypoint.}
 
-\item{\code{url_logout_template}}{URL template for logoue entrypoint.}
+\item{\code{url_logout_template}}{URL template for logout entrypoint.}
 }
 \if{html}{\out{</div>}}
 }

@@ -1,4 +1,20 @@
-# ShinyAuth <img src='man/figures/ShinyAuth-sticker.svg' align="right" height="139" />
+---
+title: "ShinyAuth"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ShinyAuth}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# ShinyAuth
 
 `ShinyAuth` provides a way to protect a [Shiny](https://shiny.rstudio.com/) application behind oAuth and OpenID Connect service providers.
 
@@ -24,7 +40,7 @@ You can also make use of built in support for user federation to other identity 
 
 ## Install
 
-```r
+```{r, eval = FALSE}
 # From github
 remotes::install_github('capiaas/ShinyAuth')
 ```
@@ -41,7 +57,7 @@ To properly handle secrets, read up on [Managing secrets by Hadley Wickham](http
 For this minimalistic example - environment variables are used.
 
 
-```r
+```{r, eval = FALSE}
 # app.R
 library(shiny)
 library(ShinyAuth)
@@ -77,7 +93,7 @@ unique_id | Stian | Berger | stiberger | Stian Berger | https://example.com/phot
 
 If you have split the code in more files, it goes like this.
 
-```r
+```{r, eval = FALSE}
 #global.R
 library(shiny)
 library(ShinyAuth)
@@ -91,7 +107,7 @@ auth <- ShinyAuth_Auth0$new(
 )
 ```
 
-```r
+```{r, eval = FALSE}
 # ui.R
 ui <- fluidPage(
   auth$scripts(),
@@ -102,7 +118,7 @@ ui <- fluidPage(
 auth$ui(ui)
 ```
 
-```r
+```{r, eval = FALSE}
 #server.R
 server <- function(input, output, session) {
   output$userinfo <- renderTable({session$user})
@@ -133,7 +149,7 @@ auth$server(server)
 
 When testing locally - Shiny launches on random ports. Service providers are strict about redirect urls back to application. It makes life easier to force Shiny to launch on a specific port.
 
-```r
+```{r, eval = FALSE}
 options(shiny.port = 3838)
 # or
 shiny::runApp('/app-path/', port = 3838)

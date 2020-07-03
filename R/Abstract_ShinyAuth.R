@@ -14,7 +14,7 @@ Abstract_ShinyAuth = R6::R6Class(
     #' @field url_userinfo_template URL template for userinfo entrypoint.
     url_userinfo_template = '',
 
-    #' @field url_logout_template URL template for logoue entrypoint.
+    #' @field url_logout_template URL template for logout entrypoint.
     url_logout_template = '',
 
     #' @description
@@ -81,7 +81,7 @@ Abstract_ShinyAuth = R6::R6Class(
     },
 
     #' @description
-    #' Athenticating shiny server wrapper.
+    #' Authenticating shiny server wrapper.
     #' It takes a shiny server functions, and starts it once we have successfully authenticated the user.
     #'
     #' @param server Shiny server function
@@ -202,7 +202,7 @@ Abstract_ShinyAuth = R6::R6Class(
     },
 
     #' @description
-    #' Gett access token from athentication server.
+    #' Get access token from authentication server.
     #' Used to get userinfo.
     #'
     #' @param code Authentication code from provider
@@ -255,7 +255,7 @@ Abstract_ShinyAuth = R6::R6Class(
     #' @todo Could support bookmarking state, to be able to come back to same UI state as we are leaving it.
     #'   Make it possible to pass along a custom state handling class?
     #'
-    #' @return 10 random alpahuneric characters
+    #' @return 10 random alphanumeric characters
     generate_state = function() {
       paste0(sample(c(LETTERS, letters, 0:9), size = 10, replace = TRUE), collapse = '')
     }

@@ -23,7 +23,7 @@ get_access_token
 
 \item{\code{url_userinfo_template}}{URL template for userinfo entrypoint.}
 
-\item{\code{url_logout_template}}{URL template for logoue entrypoint.}
+\item{\code{url_logout_template}}{URL template for logout entrypoint.}
 }
 \if{html}{\out{</div>}}
 }
@@ -153,7 +153,7 @@ URL for logout entrypoint
 \if{html}{\out{<a id="method-server"></a>}}
 \if{latex}{\out{\hypertarget{method-server}{}}}
 \subsection{Method \code{server()}}{
-Athenticating shiny server wrapper.
+Authenticating shiny server wrapper.
 It takes a shiny server functions, and starts it once we have successfully authenticated the user.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Abstract_ShinyAuth$server(server)}\if{html}{\out{</div>}}
@@ -252,7 +252,7 @@ Boolean if code exists.
 \if{html}{\out{<a id="method-get_access_token"></a>}}
 \if{latex}{\out{\hypertarget{method-get_access_token}{}}}
 \subsection{Method \code{get_access_token()}}{
-Gett access token from athentication server.
+Get access token from authentication server.
 Used to get userinfo.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Abstract_ShinyAuth$get_access_token(code)}\if{html}{\out{</div>}}
@@ -307,7 +307,7 @@ If state parameters are different, someone else has initiated the request.
 }
 
 \subsection{Returns}{
-10 random alpahuneric characters
+10 random alphanumeric characters
 }
 }
 \if{html}{\out{<hr>}}

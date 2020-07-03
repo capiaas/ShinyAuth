@@ -17,7 +17,7 @@ ShinyAuth_Auth0 = R6::R6Class(
     #' @field url_userinfo_template URL template for userinfo entrypoint.
     url_userinfo_template = 'https://{auth_domain}/userinfo',
 
-    #' @field url_logout_template URL template for logoue entrypoint.
+    #' @field url_logout_template URL template for logout entrypoint.
     url_logout_template = 'https://{auth_domain}/v2/logout?client_id={client_id}&returnTo={encoded_redirect_uri}{federated}',
 
     #' @description
@@ -37,7 +37,7 @@ ShinyAuth_Auth0 = R6::R6Class(
     #' @description
     #' Get log out url
     #'
-    #' @param return_url The url to redirect to when user is loged out.
+    #' @param return_url The url to redirect to when user is logged out.
     #' @param federated To log out user from federated identity provider. (Not just this app)
     #'
     #' @return URL for logout entrypoint

@@ -17,7 +17,7 @@ ShinyAuth_Keycloak = R6::R6Class(
     #' @field url_userinfo_template URL template for userinfo entrypoint.
     url_userinfo_template = 'https://{auth_domain}/auth/realms/{realm}/protocol/openid-connect/userinfo',
 
-    #' @field url_logout_template URL template for logoue entrypoint.
+    #' @field url_logout_template URL template for logout entrypoint.
     url_logout_template = 'https://{auth_domain}/auth/realms/{realm}/protocol/openid-connect/logout?redirect_uri={encoded_redirect_uri}',
 
     #' @description

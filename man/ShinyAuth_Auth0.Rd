@@ -23,7 +23,7 @@ Provides methods for protecting a Shiny app against Auth0 as identity provider.
 
 \item{\code{url_userinfo_template}}{URL template for userinfo entrypoint.}
 
-\item{\code{url_logout_template}}{URL template for logoue entrypoint.}
+\item{\code{url_logout_template}}{URL template for logout entrypoint.}
 }
 \if{html}{\out{</div>}}
 }
@@ -92,7 +92,7 @@ Get log out url
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{return_url}}{The url to redirect to when user is loged out.}
+\item{\code{return_url}}{The url to redirect to when user is logged out.}
 
 \item{\code{federated}}{To log out user from federated identity provider. (Not just this app)}
 }

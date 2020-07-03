@@ -4,14 +4,19 @@ Title: Shiny SSO Authentication
 Version: 0.1.0
 Authors@R: c(
       person("Stian", "Berger", email = "stian@capia.no", role = c("aut", "cre")),
-      person("Bjørn Ole", "Lindseth", email = "bjorn@capia.no", role = c("ctb"))
+      person("Bjørn Ole", "Lindseth", email = "bjorn@capia.no", role = c("ctb")),
+      person(family = "Capia AS", role = c("cph"))
     )
-Description: Enabling authenticating of users from different identity providers in shiny
-    using oAuth / OpenIDC protocol. Supporting Auth0 and Keycloac (More to come).
-    Federation to other identity providers like Azure, Google, Facebook and others is possible through Auth0 and Keycloak.
-    Not reliant on Shiny Server Pro.
+Description: Enabling authenticating of users from different identity providers in 'Shiny'
+    using 'oAuth2' protocol. Currently supporting 'Auth0' and 'Keycloak'.
+    Federation to other identity providers like 'Azure', 'Google', 'Github', 'Facebook' and others is possible through 'Auth0' and 'Keycloak'.
+    Multi factor authentication is also an option.
 License: MIT + file LICENSE
 Encoding: UTF-8
+Depends:
+    R (>= 3.0.2)
+URL: https://github.com/capiaas/ShinyAuth
+BugReports: https://github.com/capiaas/ShinyAuth/issues
 Imports:
   R6,
   shiny,
@@ -25,4 +30,8 @@ Collate:
     'ShinyAuth_Auth0.R'
     'ShinyAuth_Keycloak.R'
 Suggests: 
-    testthat
+    testthat,
+    knitr,
+    rmarkdown,
+    covr
+VignetteBuilder: knitr
