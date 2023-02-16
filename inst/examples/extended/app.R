@@ -7,10 +7,10 @@ ShinyAuth_LocalKeycloak = R6::R6Class(
   'ShinyAuth_LocalKeycloak',
   inherit = ShinyAuth::ShinyAuth_Keycloak,
   public = list(
-    url_auth_template = 'http://{auth_domain}/auth/realms/{realm}/protocol/openid-connect/auth?client_id={client_id}&redirect_uri={encoded_redirect_uri}&response_type=code&state={state}&scope={encoded_scope}',
-    url_token_template = 'http://{auth_domain}/auth/realms/{realm}/protocol/openid-connect/token',
-    url_userinfo_template = 'http://{auth_domain}/auth/realms/{realm}/protocol/openid-connect/userinfo',
-    url_logout_template = 'http://{auth_domain}/auth/realms/{realm}/protocol/openid-connect/logout?redirect_uri={encoded_redirect_uri}'
+    url_auth_template = 'http://{auth_domain}/realms/{realm}/protocol/openid-connect/auth?client_id={client_id}&redirect_uri={encoded_redirect_uri}&response_type=code&state={state}&scope={encoded_scope}',
+    url_token_template = 'http://{auth_domain}/realms/{realm}/protocol/openid-connect/token',
+    url_userinfo_template = 'http://{auth_domain}/realms/{realm}/protocol/openid-connect/userinfo',
+    url_logout_template = 'http://{auth_domain}/realms/{realm}/protocol/openid-connect/logout?redirect_uri={encoded_redirect_uri}'
   )
 )
 

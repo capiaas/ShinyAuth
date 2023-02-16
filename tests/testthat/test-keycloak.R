@@ -19,10 +19,10 @@ test_that('Testing entrypoint URLs is correct', {
     auth_domain = 'auth.example.org',
     realm = 'realm_test'
   )
-  expect_equal(auth$url_auth(state = 'state_test'), 'https://auth.example.org/auth/realms/realm_test/protocol/openid-connect/auth?client_id=client_id_test&redirect_uri=http%3A%2F%2F127.0.0.1%3A3838%2F&response_type=code&state=state_test&scope=openid%20profile%20email')
-  expect_equal(auth$url_token(), 'https://auth.example.org/auth/realms/realm_test/protocol/openid-connect/token')
-  expect_equal(auth$url_userinfo(), 'https://auth.example.org/auth/realms/realm_test/protocol/openid-connect/userinfo')
-  expect_equal(auth$url_logout(), 'https://auth.example.org/auth/realms/realm_test/protocol/openid-connect/logout?redirect_uri=http%3A%2F%2F127.0.0.1%3A3838%2F')
+  expect_equal(auth$url_auth(state = 'state_test'), 'https://auth.example.org/realms/realm_test/protocol/openid-connect/auth?client_id=client_id_test&redirect_uri=http%3A%2F%2F127.0.0.1%3A3838%2F&response_type=code&state=state_test&scope=openid%20profile%20email')
+  expect_equal(auth$url_token(), 'https://auth.example.org/realms/realm_test/protocol/openid-connect/token')
+  expect_equal(auth$url_userinfo(), 'https://auth.example.org/realms/realm_test/protocol/openid-connect/userinfo')
+  expect_equal(auth$url_logout(), 'https://auth.example.org/realms/realm_test/protocol/openid-connect/logout?redirect_uri=http%3A%2F%2F127.0.0.1%3A3838%2F')
 })
 
 test_that('Custom logout url works', {
@@ -33,7 +33,7 @@ test_that('Custom logout url works', {
     auth_domain = 'auth.example.org',
     realm = 'realm_test'
   )
-  expect_equal(auth$url_logout(return_url = 'http://logout.example.org/'), 'https://auth.example.org/auth/realms/realm_test/protocol/openid-connect/logout?redirect_uri=http%3A%2F%2Flogout.example.org%2F')
+  expect_equal(auth$url_logout(return_url = 'http://logout.example.org/'), 'https://auth.example.org/realms/realm_test/protocol/openid-connect/logout?redirect_uri=http%3A%2F%2Flogout.example.org%2F')
 })
 
 test_that('Override scope works', {
@@ -45,7 +45,7 @@ test_that('Override scope works', {
     realm = 'realm_test',
     scope = 'openid profile email role_list'
   )
-  expect_equal(auth$url_auth(state = 'state_test'), 'https://auth.example.org/auth/realms/realm_test/protocol/openid-connect/auth?client_id=client_id_test&redirect_uri=http%3A%2F%2F127.0.0.1%3A3838%2F&response_type=code&state=state_test&scope=openid%20profile%20email%20role_list')
+  expect_equal(auth$url_auth(state = 'state_test'), 'https://auth.example.org/realms/realm_test/protocol/openid-connect/auth?client_id=client_id_test&redirect_uri=http%3A%2F%2F127.0.0.1%3A3838%2F&response_type=code&state=state_test&scope=openid%20profile%20email%20role_list')
 })
 
 test_that('We can override url templates', {

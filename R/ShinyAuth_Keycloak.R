@@ -9,16 +9,16 @@ ShinyAuth_Keycloak = R6::R6Class(
   public = list(
 
     #' @field url_auth_template URL template for auth entrypoint.
-    url_auth_template = 'https://{auth_domain}/auth/realms/{realm}/protocol/openid-connect/auth?client_id={client_id}&redirect_uri={encoded_redirect_uri}&response_type=code&state={state}&scope={encoded_scope}',
+    url_auth_template = 'https://{auth_domain}/realms/{realm}/protocol/openid-connect/auth?client_id={client_id}&redirect_uri={encoded_redirect_uri}&response_type=code&state={state}&scope={encoded_scope}',
 
     #' @field url_token_template URL template for token entrypoint.
-    url_token_template = 'https://{auth_domain}/auth/realms/{realm}/protocol/openid-connect/token',
+    url_token_template = 'https://{auth_domain}/realms/{realm}/protocol/openid-connect/token',
 
     #' @field url_userinfo_template URL template for userinfo entrypoint.
-    url_userinfo_template = 'https://{auth_domain}/auth/realms/{realm}/protocol/openid-connect/userinfo',
+    url_userinfo_template = 'https://{auth_domain}/realms/{realm}/protocol/openid-connect/userinfo',
 
     #' @field url_logout_template URL template for logout entrypoint.
-    url_logout_template = 'https://{auth_domain}/auth/realms/{realm}/protocol/openid-connect/logout?redirect_uri={encoded_redirect_uri}',
+    url_logout_template = 'https://{auth_domain}/realms/{realm}/protocol/openid-connect/logout?redirect_uri={encoded_redirect_uri}',
 
     #' @description
     #' Initialize Keycloak authentication for shiny app
