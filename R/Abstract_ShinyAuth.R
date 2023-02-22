@@ -171,7 +171,7 @@ Abstract_ShinyAuth = R6::R6Class(
     #'
     #' @return A full authenticated shiny app
     app = function(ui, server) {
-      shinyApp(ui = self$ui(ui), server = self$server(server))
+      shiny::shinyApp(ui = self$ui(ui), server = self$server(server))
     },
 
     #' @description
